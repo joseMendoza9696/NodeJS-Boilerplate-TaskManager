@@ -4,6 +4,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require ('jsonwebtoken');
 const Task = require('./task');
 
+
 // creamos un nuevo esquema para nuestra base de datos
 const userSchema = new mongoose.Schema({
     name: {
@@ -141,6 +142,7 @@ userSchema.pre('remove', async function(next) {
 
     next();
 });
+
 
 // creamos el modelo para nuestra DB
 const User = mongoose.model('User', userSchema);
